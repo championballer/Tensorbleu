@@ -1,9 +1,6 @@
-## Welcome to GitHub Pages
+## Tensorbleu
 
-You can use the [editor on GitHub](https://github.com/championballer/Tensorbleu/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
+Tensorbleu is a project with the aim to write deep learning and machine learning algorithms and techniques in C++. This is meant to understand some of the things that we take for granted while prototyping in Python. We hope that while implementing this project we understand the kind of design decisions that need to be taken inorder to develop a good deep learning based library. 
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
