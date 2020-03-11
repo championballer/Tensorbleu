@@ -15,3 +15,14 @@ std::vector<std::vector<int> > initialise(int m, int n)
 
 	return toReturn;
 }
+
+int sum(std::vector<int> x)
+{
+	int result = 0;
+	for(int i=0;i<x.size();i++)
+	{
+		result+=(x[i]);
+	}
+
+	return result;
+}
