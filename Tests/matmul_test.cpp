@@ -1,6 +1,6 @@
 #include<iostream>
 #include<vector>
-#include "matrix_multiplication.h"
+#include "../matrix_multiplication.h"
 
 int main()
 {
