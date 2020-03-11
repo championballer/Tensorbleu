@@ -1,30 +1,21 @@
-vector<vector<int> > initialise(int m, int n)
-{
-	vector<vector<int> > toReturn(m);
-	for(int i=0;i<m;i++)
-	{
-		toReturn[i] = vector<int> (n);
-		for(int j=0;j<n;j++)
-		{
-			toReturn[i][j] = rand();
-		}
-	}
-
-	return toReturn;
-
-}
-
-
+#pragma once
+#include "helper_functions.h"
+#include "loss_functions.h"
+#include "activation_functions.h"
 
 class FullyConnectedNetwork{
 
-	unordered_map<int, vector<vector<int> > > weights;
-	unordered_map<int, vector<int> > biases;
+	std::unordered_map<int, std::vector<std::vector<int> > > weights;
+	std::unordered_map<int, std::vector<int> > biases;
 
 	public:
 
+	/* 
+	Constructor for a linear model
 
-	FullyConnectedNetwork(int input, int output, vector<int> hidden_sizes)
+	A model with random weights gets intialised and its instance is returned
+	*/
+	FullyConnectedNetwork(int input, int output, std::vector<int> hidden_sizes)
 	{
 		
 		weights[0] = initialise(input, hidden_sizes[0]);
@@ -36,6 +27,17 @@ class FullyConnectedNetwork{
 		weights[hidden_sizes.size()] = initialise(hidden_sizes[hidden_sizes.size()-1],output);
 	}
 
+	/*
+	A function to fit data on the weights
+	*/
+	void fit()
+	{
+
+	}
+
+	/*
+	A method to print the weights of a network from weights map
+	*/
 	void printWeights()
 	{
 		for(int i=0;i<weights.size();i++)
@@ -44,11 +46,11 @@ class FullyConnectedNetwork{
 			{
 				for(int k=0;k<weights[i][j].size();k++)
 				{
-					cout<<weights[i][j][k]<<" ";
+					std::cout<<weights[i][j][k]<<" ";
 				}
-				cout<<endl;
+				std::cout<<std::endl;
 			}
-			cout<<endl;
+			std::cout<<std::endl;
 		}
 	}
 
